@@ -1,0 +1,12 @@
+{
+  "app": {
+    "port": "PORT_NUMBER",
+    "sessionSecret": "SESSION_SECRET",
+    "mongoConfig":{
+      "host": "MONGO_HOST",
+      "port": "MONGO_PORT",
+      "timeout": "MONGO_TIMEOUT",
+      "dbName": "DB_NAME"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<%- include('../includes/top.ejs') %>
+
+</head>
+
+<body>
+  <%- include('../includes/navigation.ejs') %>
+
+  <main class="myContainer">
+    <input class="search-box" type="text" id="search" onkeyup="filterUsers(event)" autocomplete="off" placeholder="Search by first or last name or email.." title="Type in a name or email">
+
+  <table class="table" id="user-table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">firstName</th>
+        <th scope="col">lastName</th>
+        <th scope="col">dateOfbirth</th>
+        <th scope="col">email</th>
+        <th scope="col">phone</th>
+        <th scope="col">purpose</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <%userList.forEach(user => {%>
+      <tr class="user-data-tr">
+        <th scope="row"><%= user._id %></th>
+        <td class="first-name"><%= user.firstName %></td> 
+        <td class="last-name"><%= user.lastName %></td> 
+        <td><%= user.dateOfbirth %></td>
+        <td class="email"><%= user.email %></td> 
+        <td><%= user.phone %></td>
+        <td><%= user.purpose %></td>
+        
+      </tr>
+    <%})%>
+     
+     
+    </tbody>
+  </table>
+
+  </main>
+
+  <%- include('../includes/bottom.ejs') %>

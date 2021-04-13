@@ -1,0 +1,13 @@
+{
+  "app": {
+    "port": 5000,
+    "serviceName": "Student detail extractor",
+    "sessionSecret": "DFSTW@%£^HJK",
+    "mongoConfig": {
+      "host": "localhost",
+      "port": 27017,
+      "timeout": 5000,
+      "dbName": "studentpage"
+    }
+  }
+}
